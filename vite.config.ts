@@ -1,24 +1,34 @@
-import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import { resolve } from 'node:path';
+import { defineConfig } from 'vite';
+import dotenv from 'dotenv';
+import dotenvExpand from 'dotenv-expand';
 
-const root = resolve(__dirname, 'src')
-const outDir = resolve(__dirname, 'public')
+
+const Env = dotenv.config();
+dotenvExpand.expand(Env);
+
+const host = process.env.VITE_SERVER_HOST;
+const base = process.env.VITE_SERVER_BASE;
+
+const assetsDir = 'assets';
+const root = resolve(__dirname, 'src');
+const outDir = resolve(__dirname, 'public');
 
 export default defineConfig({
     root,
-    base: '/static',
+    base,
     server: {
-        host: 'sikessem.test',
-        port: 4444
+        host,
+        base,
     },
     build: {
         outDir,
-        assetsDir: 'assets',
+        assetsDir,
         emptyOutDir: true,
         manifest: true,
         rollupOptions: {
             input: {
-                main: resolve(root, 'main.ts'),
+                main: resolve(root, 'page.html'),
             },
             output: {
                 manualChunks: undefined,

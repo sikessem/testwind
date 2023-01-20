@@ -10,7 +10,6 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
-        'plugin:qwik/recommended',
         'standard-with-typescript',
         'prettier',
     ],

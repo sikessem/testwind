@@ -1,7 +1,7 @@
 {
     "include": [
-        "./src/**/*",
-        "./tests/**/*",
+        "src/**/*",
+        "tests/**/*",
     ],
     "exclude": [
         "node_modules",
@@ -33,11 +33,7 @@
         "noEmit": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "paths": {
-            "~/*": [
-                "./src/*"
-            ],
-        },
+        "paths": {},
         "types": [
             "node",
             "vite/client",

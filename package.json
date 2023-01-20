@@ -1,0 +1,67 @@
+{
+    "name": "@sikessem/create-skeleton",
+    "type": "module",
+    "private": true,
+    "engines": {
+        "node": "^16.0.0 || >=18.0.0"
+    },
+    "packageManager": "pnpm@7.18.2",
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "MIT",
+    "homepage": "https://npmjs.com/package/@sikessem/create-skeleton",
+    "repository": "https://github.com/sikessem/js-skeleton",
+    "description": "📦️ The Sikessem Skeleton for creating new TypeScript/JavaScript module.",
+    "keywords": [
+        "sikessem",
+        "skeleton",
+        "javascript",
+        "typescript",
+        "ske",
+        "js",
+        "ts"
+    ],
+    "author": {
+        "name": "SIGUI Kessé Emmanuel",
+        "email": "ske@sikessem.com",
+        "url": "https://sikessem.com"
+    },
+    "scripts": {
+        "dev": "concurrently vite vitest",
+        "prod": "tsc && vite build",
+        "fmt": "prettier --write .",
+        "lint": "eslint . --ext .ts,.js --fix",
+        "test": "test:lint && test:fmt && test:unit",
+        "test:lint": "eslint . --ext .ts,.js",
+        "test:fmt": "prettier --check .",
+        "test:unit": "vitest run",
+        "test:cov": "vitest run --coverage"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+        "@tailwindcss/typography": "^0.5.8",
+        "@types/node": "^18.11.18",
+        "@typescript-eslint/eslint-plugin": "^5.47.1",
+        "@typescript-eslint/parser": "^5.47.1",
+        "autoprefixer": "^10.4.13",
+        "concurrently": "^7.6.0",
+        "cssnano": "^5.1.14",
+        "eslint": "^8.30.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard-with-typescript": "^24.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.6.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "postcss": "^8.4.20",
+        "postcss-import": "^15.1.0",
+        "postcss-nested": "^6.0.0",
+        "prettier": "^2.8.1",
+        "prettier-plugin-tailwindcss": "^0.2.1",
+        "tailwindcss": "^3.2.4",
+        "typescript": "^4.9.4",
+        "vite": "^4.0.3",
+        "vitest": "^0.26.2"
+    }
+}
